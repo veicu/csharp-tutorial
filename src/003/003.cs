@@ -11,7 +11,7 @@ namespace P003
             int x = 10;
 
             //
-            //
+            // if
             //
 
             if (x > 5)
@@ -20,7 +20,7 @@ namespace P003
             }
 
             //
-            //
+            // if - else
             //
 
             if (x > 5)
@@ -33,14 +33,14 @@ namespace P003
             }
 
             //
-            //
+            // if - else if - else
             //
 
-            if ( x < 0 )
+            if (x < 0)
             {
                 System.Console.WriteLine("x is less than 0");
             }
-            else if ( x > 10 )
+            else if (x > 10)
             {
                 System.Console.WriteLine("x is greater than 10");
             }
@@ -50,7 +50,7 @@ namespace P003
             }
 
             //
-            //
+            // switch - case
             //
 
             x = 23;
@@ -69,7 +69,7 @@ namespace P003
             }
 
             //
-            //
+            // while
             //
 
             x = 0;
@@ -81,7 +81,7 @@ namespace P003
             }
 
             //
-            //
+            // do - while
             //
 
             x = 0;
@@ -93,7 +93,7 @@ namespace P003
             } while (x < 10);
 
             //
-            //
+            // for
             //
 
             for (int i = 0; i < 10; i++)
@@ -102,7 +102,7 @@ namespace P003
             }
 
             //
-            //
+            // foreach
             //
 
             string[] names = { "Isabella", "Emily", "Finn" };
@@ -113,12 +113,12 @@ namespace P003
             }
 
             //
-            //
+            // break - continue
             //
 
             string[] friends = { "Alex", "Peter", "Anna", "Marta", "Elmo" };
 
-            for (int i = 0; i< friends.Length; ++i )
+            for (int i = 0; i< friends.Length; ++i)
             {
                 if (friends[i] == "Peter")
                 {
@@ -134,7 +134,7 @@ namespace P003
             }
 
             //
-            //
+            // the end
             //
 
             System.Console.ReadLine();

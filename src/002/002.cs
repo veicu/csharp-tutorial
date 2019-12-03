@@ -21,7 +21,7 @@ namespace P002
             // Integer types
             //
 
-            byte   byteVar   = 255;                    // System.Byte     8 - bit unsigned integer        0 to 255
+            byte   byteVar   = 255;                    // System.Byte     8 - bit unsigned integer          0 to 255
             sbyte  sbyteVar  = 127;                    // System.SByte    8 - bit signed   integer type  -128 to 127
             short  shortVar  = 32767;                  // System.Int16   16 - bit signed   integer type
             ushort ushortVar = 65535;                  // System.UInt16  16 - bit unsigned integer type
@@ -84,6 +84,12 @@ namespace P002
             System.Console.WriteLine("Size of long   : {0} bytes", sizeof(long));
             System.Console.WriteLine("Size of float  : {0} bytes", sizeof(float));
             System.Console.WriteLine("Size of double : {0} bytes", sizeof(double));
+
+
+            //
+            // the end
+            //
+
             System.Console.ReadLine();
         }
     }

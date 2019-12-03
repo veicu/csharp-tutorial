@@ -1,20 +1,17 @@
 ﻿/*
-    polymorphism
+    abstraction
 */
 
-namespace P006
+namespace P007
 {
-    class Animal
+    abstract class Animal
     {
         public Animal()
         {
 
         }
 
-        public virtual void animalSound()
-        {
-            System.Console.WriteLine("###");
-        }
+        public abstract void animalSound();
 
         public void sleep()
         {
@@ -52,12 +49,12 @@ namespace P006
     {
         static void Main(string[] args)
         {
-            Animal a = new Animal();
+            /*
+            Animal a = new Animal(); // Cannot create an instance of abstract class
+            */
+
             Animal c = new Cat();
             Animal d = new Dog();
-
-            a.animalSound();
-            a.sleep();
 
             c.animalSound();
             c.sleep();

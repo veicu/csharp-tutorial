@@ -108,16 +108,22 @@ namespace P004
     {
         static void Main(string[] args)
         {
-            Point2D point1;
-            Point2D point2 = new Point2D(10,20);
+            Point2D point1 = new Point2D();
+            Point2D point2 = new Point2D();
+            Point2D point3 = new Point2D(10,20);
 
-            point2.x = 10;
-            point2.y = 20;
+            point2.x = 5;
+            point2.y = 15;
+
+            System.Console.WriteLine("point1 ({0}/{1})", point1.x, point1.y);
+            System.Console.WriteLine("point2 ({0}/{1})", point2.x, point2.y);
+            System.Console.WriteLine("point3 ({0}/{1})", point3.x, point3.y);
 
             Rectangle rect1 = new Rectangle();
             Rectangle rect2 = new Rectangle(10,20);
 
-            System.Console.WriteLine( rect2.area() );
+            System.Console.WriteLine("rect1 [{0}/{1}] => {2}", rect1.Width, rect1.Height, rect1.area());
+            System.Console.WriteLine("rect2 [{0}/{1}] => {2}", rect2.Width, rect2.Height, rect2.area());
 
             System.Console.ReadLine();
         }

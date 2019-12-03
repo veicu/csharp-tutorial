@@ -1,5 +1,5 @@
 ﻿/*
-
+    class inheritance
 */
 
 namespace P005
@@ -94,135 +94,24 @@ namespace P005
         private int m_height;
     }
 
-
-    enum LengthUnit
-    {
-        m,
-        cm,
-        inch
-    }
-
-    class Length
-    {
-        private double lengthInMeter;
-
-        public Length()
-        {
-            lengthInMeter = 0;
-        }
-
-        public double Meter
-        {
-            get { return lengthInMeter; }
-            set { lengthInMeter = value; }
-        }
-
-        public double CentiMeter
-        {
-            get { return lengthInMeter * 100; }
-            set { lengthInMeter = value / 100; }
-        }
-
-        public double Inch
-        {
-            get { return lengthInMeter / 2.54; }
-            set { lengthInMeter = value * 2.56; }
-        }
-
-        // indexer property
-        public double this [string unit]
-        {
-            get
-            {
-                switch(unit)
-                {
-                    case "m":
-                        return Meter;
-                    case "cm":
-                        return CentiMeter;
-                    case "inch":
-                        return Inch;
-                }
-
-                return 0;
-            }
-
-            set
-            {
-                switch (unit)
-                {
-                    case "m":
-                        Meter = value;
-                        break;
-                    case "cm":
-                        CentiMeter = value;
-                        break;
-                    case "inch":
-                        Inch = value;
-                        break;
-                }
-            }
-        }
-
-        // indexer property
-        public double this[LengthUnit unit]
-        {
-            get
-            {
-                switch (unit)
-                {
-                    case LengthUnit.m:
-                        return Meter;
-                    case LengthUnit.cm:
-                        return CentiMeter;
-                    case LengthUnit.inch:
-                        return Inch;
-                }
-
-                return 0;
-            }
-
-            set
-            {
-                switch (unit)
-                {
-                    case LengthUnit.m:
-                        Meter = value;
-                        break;
-                    case LengthUnit.cm:
-                        CentiMeter = value;
-                        break;
-                    case LengthUnit.inch:
-                        Inch = value;
-                        break;
-                }
-            }
-
-        }
-
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            Rect r1 = new Rect(0, 0, 100, 50);
+            Rect r1 = new Rect();
+            Rect r2 = new Rect();
+            Rect r3 = new Rect(5, 10);
+            Rect r4 = new Rect(55, 25, 100, 50);
 
-            Length l1 = new Length();
-            l1.Meter = 10.0;
-            System.Console.WriteLine(l1.CentiMeter);
+            r2.x      = 10;
+            r2.y      = 15;
+            r2.Width  = 50;
+            r2.Height = 25;
 
-            l1["cm"] = 123;
-            System.Console.WriteLine(l1.Meter);
-
-            l1[LengthUnit.inch] = 200;
-            System.Console.WriteLine(l1.Inch);
-            System.Console.WriteLine(l1.Meter);
-
-            Length l2 = new Length
-            {
-                Meter = 2.5
-            };
+            System.Console.WriteLine("r1 [{0}/{1}/{2}/{3}]", r1.x, r1.y, r1.Width, r1.Height);
+            System.Console.WriteLine("r2 [{0}/{1}/{2}/{3}]", r2.x, r2.y, r2.Width, r2.Height);
+            System.Console.WriteLine("r3 [{0}/{1}/{2}/{3}]", r3.x, r3.y, r3.Width, r3.Height);
+            System.Console.WriteLine("r4 [{0}/{1}/{2}/{3}]", r4.x, r4.y, r4.Width, r4.Height);
 
             System.Console.ReadLine();
         }
